@@ -5,6 +5,8 @@ require('dotenv').config();
 const app = express();
 const PORT = process.env.PORT || 5050;
 
+const HOST = '0.0.0.0';                // Hardcoded so Railway can route traffic to it
+
 app.use(cors());
 app.use(express.json());
 
