@@ -5,8 +5,10 @@ require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 5050;
-const HOST = process.env.HOST || '127.0.0.1';
 
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server running on http://0.0.0.0:${PORT}`);
+});
 app.use(cors());
 app.use(express.json());
 
